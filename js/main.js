@@ -4,7 +4,7 @@ let pago = parseInt(prompt("Ingrese el Monto de su Salario por Hora:"))
 let HorasTrabajadas = parseInt(prompt("Ingrese las Horas Trabajadas en la Semana:"))
 
 
-const CalcularSalario = (pago, HorasTrabajadas) => {
+const CalcularSalario = () => {
 if(HorasTrabajadas >40){
     let HorasExtras = (HorasTrabajadas - 40) * pago * 2
     let SalarioTotal = (HorasTrabajadas * pago) + HorasExtras
