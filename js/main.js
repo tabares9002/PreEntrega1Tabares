@@ -1,19 +1,74 @@
-let nombre = prompt("Ingrese su nombre:");
-let apellido = prompt("Ingrese su Apellido:");
-let HorasDeTrabajo = parseInt(prompt("Ingrese las Horas Trabajadas en la Semana (Hasta 40hrs):"));
-let salarioHora = parseInt(prompt("Ingrese el monto de su Salario por Hora:"));
-let HorasExtras = (prompt("Trabajó Horas Extras? (Si/No):"));
+alert ("Ingresando los Datos Podrá Calcular su Salario Semanal")
 
-while (HorasDeTrabajo > 40) {
-    HorasDeTrabajo = parseInt(prompt("Error! Ingrese Nuevamente las Horas Trabajadas en la Semana (Hasta 30hrs):"));
+let pago = parseInt(prompt("Ingrese el Monto de su Salario por Hora:"))
+let HorasTrabajadas = parseInt(prompt("Ingrese las Horas Trabajadas en la Semana:"))
+
+
+const CalcularSalario = (pago, HorasTrabajadas) => {
+if(HorasTrabajadas >40){
+    let HorasExtras = (HorasTrabajadas - 40) * pago * 2
+    let SalarioTotal = (HorasTrabajadas * pago) + HorasExtras
+    alert ("El Total de su Salario Semanal es:" + " " + "$" + SalarioTotal)
+}
+else {
+let SalarioTotal = (HorasTrabajadas * pago)
+alert ("El Total de su Salario Semanal es" + " " + "$" + SalarioTotal)
 }
 
-// if (HorasExtras == Si) {
-//     let CantidadHorasExtras = parseInt(prompt("Ingrese Cantidad de Horas Extras Trabajadas:"));
+}
+
+CalcularSalario()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// alert("Hola! Ingresando los datos solicitados podrá calcular su salario mensual")
+
+// function DatosPersona() {
+//     let nombre = prompt("Ingrese su nombre:");
+//     let apellido = prompt("Ingrese su Apellido:");
 // }
 
-let SalarioTotal = (HorasDeTrabajo * salarioHora)*4;
-alert("Sr/a" + " " + nombre + " " + apellido + "\nSu salario mensual es" + " " + "$" + SalarioTotal);
+// function HorasTrabajadas() {
+//     let salarioHora = parseInt(prompt("Ingrese el monto de su Salario por Hora:"));
+//     let HorasDeTrabajo = parseInt(prompt("Ingrese las Horas Trabajadas en la Semana (Hasta 40hrs):"));
+//     while (HorasDeTrabajo > 40) {
+//         HorasDeTrabajo = parseInt(prompt("Error! Ingrese Nuevamente las Horas Trabajadas en la Semana (Hasta 30hrs):"));
+//     }
+//     return HorasDeTrabajo
 
-// function CalcularSalario()
-// CalcularSalario();
+// }
+
+
+// let HorasExtras = (prompt("Ingrese Horas Extras Trabajadas:"));
+
+
+// function CalcularSalario(salarioHora, HorasDeTrabajo){
+// let SalarioTotal = (HorasDeTrabajo * salarioHora) * 4;
+
+// }
+
+// const Datos = DatosPersona()
+// const salarioHora = HorasTrabajadas()
+// const Resultado = CalcularSalario(salarioHora, HorasDeTrabajo)
+
+// alert("Sr/a" + " " + nombre + " " + apellido + "\nSu salario mensual es" + " " + "$" + CalcularSalario);
+
+// alert("Sr/a" + " " + nombre + " " + apellido + "\nSu salario mensual es" + " " + "$" + SalarioTotal);
